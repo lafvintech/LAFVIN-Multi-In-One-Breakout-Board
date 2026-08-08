@@ -9,7 +9,7 @@ Introduction
 
 **LAFVIN Multi In One Breakout Board**
 
-.. image:: _static/Introduction/3.robot.png
+.. image:: _static/Introduction/1.board.png
    :width: 600
    :align: center
 
@@ -22,7 +22,7 @@ Introduction
 Bill of Materials
 -----------------
 
-.. image:: _static/Introduction/4.bom.png
+.. image:: _static/Introduction/2.bom.png
    :width: 800
    :align: center
 
@@ -75,7 +75,7 @@ Technical Parameters
 
 - **The figure below shows the component definitions for the main control board:**
 
-.. image:: _static/Introduction/1.component.png
+.. image:: _static/Introduction/3.parameters.png
    :width: 600
    :align: center
 

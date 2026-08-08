@@ -8,19 +8,19 @@ LAFVIN Multi In One Breakout Board
    Introduction
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Preparation Before Use
-
-   FlashingProgram
-   assembly
-   
-.. toctree::
    :maxdepth: 2
    :caption: Quick Start Guide
 
-   ConfigureXiaozhi
-   FunctionUsageGuide
+   UserGuide
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Compatible Development Boards
 
+   DevBoard
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Example Programs
 
-
+   Programs
