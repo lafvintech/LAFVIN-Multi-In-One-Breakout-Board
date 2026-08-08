@@ -1,13 +1,13 @@
 Introduction
 ============
 
-**Dear friends, welcome to the learning world of the LAFVIN Desktop AI Gimbal Robot!**
+**Dear friends, welcome to the learning world of the LAFVIN Multi In One Breakout Board!**
 
 **Please read this documentation carefully. If you encounter any problems during use, please contact our after-sales support team, and we will assist you as soon as possible.**
 
 ----
 
-**LAFVIN Desktop AI Gimbal Robot**
+**LAFVIN Multi In One Breakout Board**
 
 .. image:: _static/Introduction/3.robot.png
    :width: 600
@@ -39,38 +39,29 @@ Bill of Materials
      - Name
      - Quantity
    * - 1
-     - Desktop AI Gimbal Robot Main Control Board
+     - Multi In One Breakout Board
      - x1
    * - 2
-     - MG90S Servo 
-     - x2
+     - Jumper Cap (Short、Red) 
+     - x5
    * - 3
-     - Gesture Recognition Module
-     - x1
+     - Jumper Cap (Short、Black)
+     - x5
    * - 4
-     - 0.96 Inch OLED Display
-     - x1
+     - Jumper Caps (Long、Red) 
+     - x5
    * - 5
-     - Custom Acrylic Panels
-     - x2
+     - Jumper Cap (Long、Black) 
+     - x5
    * - 6
-     - Custom Gimbal Sheet Metal Parts
+     - M3x10 Copper Standoff
      - x4
    * - 7
-     - 4-Pin Connection Cable
-     - x3
+     - M3x6 Screw
+     - x4
    * - 8
-     - Type-C Data Cable
-     - x1
-   * - 9
-     - Phillips screwdriver
+     - Flathead Screwdriver
      - x1  
-   * - 10
-     - Screw Pack
-     - x5  
-   * - 11
-     - Cable ties
-     - x4 
 
 ----
 
@@ -78,19 +69,6 @@ Bill of Materials
 
    Please check the contents of the package against the bill of materials. If you find any missing or damaged items, please contact our technical support team immediately.
 
-   The package does **not include an 18650 battery**. The Type-C data cable is only for flashing firmware and charging. Please note that powering the entire system solely through the Type-C data cable is insufficient and may cause the robot to crash or restart.
-
-- **18650 batteries come in flat-top and button-top varieties,please purchase the flat-top version.**
-
-.. image:: _static/Introduction/2.18650.png
-   :width: 600
-   :align: center
-
-.. raw:: html
-
-   <div style="margin-top: 30px;"></div>
-
-----
 
 Technical Parameters
 --------------------
@@ -138,30 +116,43 @@ Technical Parameters
 Function Introduction
 ---------------------
 
-A desktop robot based on the ESP32-S3, featuring an integrated 2-DOF gimbal, gesture recognition, and intelligent voice interaction.
+**Introduction:**
 
-Supporting voice interaction, facial expression display, and gesture control, it serves as an excellent hardware platform for exploring Edge AI.
+- This is a multi-functional development board expansion breakout board designed for developers, electronics enthusiasts, and educational experiments. It quickly expands the GPIO, power, and ground resources of commonly used development boards, facilitating the connection of sensors, actuators, display modules, and various electronic experimental components.
 
-More than just a desktop electronic pet, it is a programmable AI terminal—ideal for geeks, educators, and AI enthusiasts.
-Resource Download
+- The product features a universal design, supporting various 100mil (2.54mm) standard dual-row pin development boards with widths ranging from 600mil to 1000mil (15.24mm to 25.4mm), and is compatible with common development platforms such as Arduino Nano, ESP32, ESP8266, and Raspberry Pi Pico.
 
-**Powerful Development Board**
+- With onboard power input, power switch, power indicator, GPIO status indicator, and various expansion interfaces, it makes setting up development board experiments simpler, safer, and more efficient.
 
-- The main control board features a high-performance ESP32-S3 main control chip, equipped with 16MB Flash and 8MB PSRAM, and a high-performance, low-power Wi-Fi + Bluetooth dual-mode MCU module.
+**Features:**
 
-- Employs an Xtensa® 32-bit LX7 dual-core processor, easily handling the needs of graphical interface display, multitasking, wireless communication, and AIoT application development.
+- **Universal Compatibility Design, Adaptable to Multiple Development Boards**
 
-**Intelligent Interaction Methods**
+ - Utilizes a wide-compatible interface design, supporting 100mil (2.54mm) dual-row pin development boards with widths of 600mil, 800mil, 900mil, and 1000mil.
 
-- Voice Interaction: Features a built-in "Xiaozhi" AI assistant (based on xiaozhi-esp32), supporting custom wake-up words for real-time voice Q&A and control.
+ - Compatible with Arduino Nano, ESP32, ESP8266, Raspberry Pi Pico series, and other standard dual-row pin development boards. No complex adapters are required for quick expansion, meeting the development needs of various projects.
 
-- Gesture Recognition: Supports gestures such as waving and rotating, enabling contactless interaction.
+- **Abundant GPIO Expansion, Quick Connection to Peripheral Modules**
 
-- Dynamic Expressions: A 0.96-inch OLED display showcases a variety of expressions and status icons, bringing the robot to life.
+ - Through onboard expansion interfaces, the development board's GPIO, power, and ground wires are fully exposed, including: GPIO signal interfaces, 3.3V power supply, 5V power supply, and GND ground.
 
-**Flexible Athletic Ability**
+ - Also provides two-sided screw terminal interfaces, standard female header interfaces, and pin header expansion interfaces, supporting DuPont wire connections, breadboard experiments, and fixed wiring, making experimental setup more flexible and convenient.
 
-- 2-DOF Gimbal: Equipped with two MG90S servos, it can perform smooth pan and tilt movements, allowing it to "look around" and "nod" in response to interactions.
+- **Independent Indicator Light Design**
+
+ - Onboard power LED indicator displays the current power supply status in real time, allowing for quick and easy determination of system functionality.
+
+ - It also features GPIO status indicator lights, displaying high and low level changes of corresponding I/O ports, facilitating program debugging, signal detection, and hardware verification, making electronic experiments more intuitive.
+
+- **Added Power Switch for Enhanced Safety and Convenience**
+
+ - Compared to ordinary expansion boards, this product adds an independent ON/OFF sliding power switch, allowing control of the entire experimental system's power supply without frequent power plugging and unplugging. This enables quick power-off during program debugging, prevents accidental operation when modifying circuits, extends interface lifespan, and improves the development experience.
+
+- **Target audience or scenarios** 
+
+ - Suitable for electronics enthusiasts, students, teachers, makers, and embedded developers. It can be widely used in experiments with Arduino, ESP32, Raspberry Pi, Pico, and other development boards; IoT project development; robot building; smart home construction; STEM education; and electronic prototyping.
+
+ - Through convenient GPIO expansion and flexible connection methods, it helps users quickly build experimental circuits, improving development efficiency and suitable for various application needs from beginner learning to professional project development.
 
 ----
 
