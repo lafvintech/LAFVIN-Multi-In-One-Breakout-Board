@@ -1,18 +1,26 @@
-Basic Starter Kit for UNO R4 WiFi
-===========================================
-
+LAFVIN Multi In One Breakout Board
+=================================
 
 .. toctree::
    :maxdepth: 2
+   :caption: About This Kit
 
-   preparation/preparation
-   1_output
+   Introduction
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Preparation Before Use
+
+   FlashingProgram
+   assembly
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Quick Start Guide
+
+   ConfigureXiaozhi
+   FunctionUsageGuide
 
 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

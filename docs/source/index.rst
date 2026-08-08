@@ -1,5 +1,5 @@
-LAFVIN Desktop AI Gimbal Robot
-===============================
+LAFVIN Multi In One Breakout Board
+=================================
 
 .. toctree::
    :maxdepth: 2

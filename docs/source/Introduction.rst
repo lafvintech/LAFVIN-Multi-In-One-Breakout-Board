@@ -148,11 +148,11 @@ Function Introduction
 
  - Compared to ordinary expansion boards, this product adds an independent ON/OFF sliding power switch, allowing control of the entire experimental system's power supply without frequent power plugging and unplugging. This enables quick power-off during program debugging, prevents accidental operation when modifying circuits, extends interface lifespan, and improves the development experience.
 
-- **Target audience or scenarios** 
+**Target audience or scenarios** 
 
- - Suitable for electronics enthusiasts, students, teachers, makers, and embedded developers. It can be widely used in experiments with Arduino, ESP32, Raspberry Pi, Pico, and other development boards; IoT project development; robot building; smart home construction; STEM education; and electronic prototyping.
+- Suitable for electronics enthusiasts, students, teachers, makers, and embedded developers. It can be widely used in experiments with Arduino, ESP32, Raspberry Pi, Pico, and other development boards; IoT project development; robot building; smart home construction; STEM education; and electronic prototyping.
 
- - Through convenient GPIO expansion and flexible connection methods, it helps users quickly build experimental circuits, improving development efficiency and suitable for various application needs from beginner learning to professional project development.
+- Through convenient GPIO expansion and flexible connection methods, it helps users quickly build experimental circuits, improving development efficiency and suitable for various application needs from beginner learning to professional project development.
 
 ----
 
