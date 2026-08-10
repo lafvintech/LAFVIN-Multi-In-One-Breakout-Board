@@ -386,7 +386,7 @@ The connection method to the breakout board is shown in the figure below:
 
    <div style="margin-top: 30px;"></div>
 
-- Compatible with most Arduino Nano series modules.
+- Compatible with most Arduino Nano series development boards.
 
 **Connection Method**
 
@@ -490,5 +490,99 @@ The connection method to the breakout board is shown in the figure below:
 
       <div style="margin-top: 30px;"></div>
    
-- Compatible with most Arduino Nano series development boards.
+- Compatible with most Raspberry Pi Pico series development boards.
+
+**Connection Method**
+
+.. image:: _static/DevBoard/13.RaspberryPiPico.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+**Example program**
+
+.. raw:: html
+
+   <div style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+   <div id="code-container-RaspberryPiPico" style="max-height: 420px; overflow: hidden; position: relative; background: #f5f5f0;">
+
+.. code-block:: cpp
+
+ const int testPins[] = {
+    2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,  
+    19, 18, 17, 16, 15, 14, 13                                      
+ };
+
+ const int totalPins = sizeof(testPins) / sizeof(testPins[0]);
+
+ void setup() {
+    for (int i = 0; i < totalPins; i++) {
+        pinMode(testPins[i], OUTPUT);
+        digitalWrite(testPins[i], LOW);
+    }
+ }
+
+ void loop() {
+    // Forward direction
+    for (int i = 0; i < totalPins; i++) {
+        digitalWrite(testPins[i], HIGH);
+        delay(500);
+        digitalWrite(testPins[i], LOW);
+    }
+    
+    // Backward direction
+    for (int i = totalPins - 1; i >= 0; i--) {
+        digitalWrite(testPins[i], HIGH);
+        delay(500);
+        digitalWrite(testPins[i], LOW);
+    }
+ }
+
+.. raw:: html
+
+   </div>
+   <div style="display: flex; gap: 10px; padding: 12px 16px; background: #fff; border-top: 1px solid #ddd;">
+     <button id="expand-btn-RaspberryPiPico" onclick="toggleCode('code-container-RaspberryPiPico', 'expand-btn-RaspberryPiPico')" style="flex: 1; padding: 10px 16px; background: #2980B9; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">▼ Expand All Code</button>
+   </div>
+   </div>
+
+   <style>
+   #code-container-RaspberryPiPico { transition: max-height 0.4s ease-in-out; }
+   </style>
+
+   <script>
+   function toggleCode(containerId, buttonId) {
+     const container = document.getElementById(containerId);
+     const btn = document.getElementById(buttonId);
+     if (container.style.maxHeight === '420px' || container.style.maxHeight === '') {
+       container.style.maxHeight = 'none';
+       btn.textContent = '✕ Collapse Code';
+     } else {
+       container.style.maxHeight = '420px';
+       btn.textContent = '▼ Expand All Code';
+     }
+   }
+   </script>
+
+.. raw:: html
+
+ <div style="margin-top: 30px;"></div>
+
+**Display Effect**
+
+.. image:: _static/DevBoard/14.RaspberryPiPico.gif
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+----
+
+6. Other Development Board
+--------------------------
 
