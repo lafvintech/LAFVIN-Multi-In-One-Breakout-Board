@@ -23,7 +23,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Example programs" href="Programs.html" />
+    <link rel="next" title="Frequently Asked Question" href="FAQ.html" />
     <link rel="prev" title="Quick Start Guide" href="UserGuide.html" /> 
 </head>
 
@@ -81,9 +81,9 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Example Programs</span></p>
+<p class="caption" role="heading"><span class="caption-text">Frequently Asked Question</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Programs.html">Example programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Frequently Asked Question</a></li>
 </ul>
 
         </div>
@@ -452,8 +452,9 @@ function toggleCode(containerId, buttonId) {
 <div style="margin-top: 30px;"></div><p><strong>Example program</strong></p>
 <div style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
 <div id="code-container-RaspberryPiPico" style="max-height: 420px; overflow: hidden; position: relative; background: #f5f5f0;"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testPins</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">   </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
-<span class="w">   </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span>
+
+<span class="w">   </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span>
 <span class="p">};</span>
 
 <span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalPins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">testPins</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
@@ -466,14 +467,13 @@ function toggleCode(containerId, buttonId) {
 <span class="p">}</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">   </span><span class="c1">// Forward direction</span>
+
 <span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">totalPins</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
 <span class="w">       </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
 <span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
 <span class="w">   </span><span class="p">}</span>
 
-<span class="w">   </span><span class="c1">// Backward direction</span>
 <span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalPins</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
 <span class="w">       </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
@@ -510,6 +510,27 @@ function toggleCode(containerId, buttonId) {
 <hr class="docutils" />
 <section id="other-development-board">
 <h2>6. Other Development Board<a class="headerlink" href="#other-development-board" title="Link to this heading"></a></h2>
+<p><strong>The LAFVIN Multi-in-One Breakout Board features a universal design; theoretically, it can be used with any setup that meets the following conditions:</strong></p>
+<ul class="simple">
+<li><p>The development board has a standard 100mil (2.54mm) dual-row pin layout.</p></li>
+<li><p>The width of the development board is between 600mil and 1000mil (15.24mm to 25.4mm).</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/15.OtherDevBoard.png"><img alt="_images/15.OtherDevBoard.png" class="align-center" src="_images/15.OtherDevBoard.png" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div><p><strong>If you need to power the development board using a jumper cap on the breakout board, the following requirements must also be met:</strong></p>
+<ul class="simple">
+<li><p>The development board’s power supply range is 3.3V–5V.</p></li>
+<li><p>The development board is equipped with power input header pins (such as VIN) and GND pins.</p></li>
+</ul>
+<a class="reference internal image-reference" href="_static/DevBoard/16.OtherDevBoard.png"><img alt="_static/DevBoard/16.OtherDevBoard.png" class="align-center" src="_static/DevBoard/16.OtherDevBoard.png" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Please carefully verify that the development board you are using meets the requirements above.</p></li>
+<li><p>Do not force it into the breakout board, to avoid damaging your development board.</p></li>
+<li><p>Please carefully identify the power pins before making connections to avoid damaging the development board.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
 </section>
 </section>
 
@@ -518,7 +539,7 @@ function toggleCode(containerId, buttonId) {
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="UserGuide.html" class="btn btn-neutral float-left" title="Quick Start Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Programs.html" class="btn btn-neutral float-right" title="Example programs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="FAQ.html" class="btn btn-neutral float-right" title="Frequently Asked Question" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

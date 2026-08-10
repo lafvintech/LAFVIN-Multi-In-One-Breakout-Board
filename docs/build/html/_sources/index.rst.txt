@@ -20,7 +20,7 @@ LAFVIN Multi In One Breakout Board
    DevBoard
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Example Programs
+   :maxdepth: 1
+   :caption: Frequently Asked Question
 
-   Programs
+   FAQ

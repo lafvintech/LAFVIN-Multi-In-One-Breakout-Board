@@ -512,8 +512,9 @@ The connection method to the breakout board is shown in the figure below:
 .. code-block:: cpp
 
  const int testPins[] = {
-    2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,  
-    19, 18, 17, 16, 15, 14, 13                                      
+
+    28, 27, 26, 22, 21, 20, 19, 18, 17, 16,
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
  };
 
  const int totalPins = sizeof(testPins) / sizeof(testPins[0]);
@@ -526,14 +527,13 @@ The connection method to the breakout board is shown in the figure below:
  }
 
  void loop() {
-    // Forward direction
+
     for (int i = 0; i < totalPins; i++) {
         digitalWrite(testPins[i], HIGH);
         delay(500);
         digitalWrite(testPins[i], LOW);
     }
     
-    // Backward direction
     for (int i = totalPins - 1; i >= 0; i--) {
         digitalWrite(testPins[i], HIGH);
         delay(500);
@@ -586,3 +586,40 @@ The connection method to the breakout board is shown in the figure below:
 6. Other Development Board
 --------------------------
 
+**The LAFVIN Multi-in-One Breakout Board features a universal design; theoretically, it can be used with any setup that meets the following conditions:**
+
+- The development board has a standard 100mil (2.54mm) dual-row pin layout.
+
+- The width of the development board is between 600mil and 1000mil (15.24mm to 25.4mm).
+
+.. image:: _static/DevBoard/15.OtherDevBoard.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+**If you need to power the development board using a jumper cap on the breakout board, the following requirements must also be met:**
+
+- The development board's power supply range is 3.3V–5V.
+
+- The development board is equipped with power input header pins (such as VIN) and GND pins.
+
+.. image:: _static/DevBoard/16.OtherDevBoard.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+.. note::
+
+ - Please carefully verify that the development board you are using meets the requirements above.
+
+ - Do not force it into the breakout board, to avoid damaging your development board.
+
+ - Please carefully identify the power pins before making connections to avoid damaging the development board.
+
+----
