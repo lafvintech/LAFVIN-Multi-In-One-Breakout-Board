@@ -72,7 +72,11 @@
 <p class="caption" role="heading"><span class="caption-text">Compatible Development Boards</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Compatible Development Boards</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#esp32-s3">ESP32-S3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esp32-s3">1. ESP32-S3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esp32">2. ESP32</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esp8266">3. ESP8266</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arduino-nano">4. Arduino Nano</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#raspberry-pi-pico">5. Raspberry Pi Pico</a></li>
 </ul>
 </li>
 </ul>
@@ -121,15 +125,328 @@
 </div>
 <hr class="docutils" />
 <section id="esp32-s3">
-<h2>ESP32-S3<a class="headerlink" href="#esp32-s3" title="Link to this heading"></a></h2>
-<ul class="simple">
+<h2>1. ESP32-S3<a class="headerlink" href="#esp32-s3" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="_static/DevBoard/0.ESP32-S3.png"><img alt="_static/DevBoard/0.ESP32-S3.png" class="align-center" src="_static/DevBoard/0.ESP32-S3.png" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div><ul class="simple">
 <li><p>Compatible with most ESP32-S3 series modules—including the ESP32-S3-WROOM and ESP32-S3-CAM—supporting both 42-pin and 44-pin configurations.</p></li>
 <li><p>The 44-Pin ESP32-S3-WROOM is used here for demonstration purposes.</p></li>
 </ul>
 <p><strong>Connection Method</strong></p>
 <p>The connection method to the breakout board is shown in the figure below:</p>
 <a class="reference internal image-reference" href="_static/DevBoard/1.ESP32-S3.png"><img alt="_static/DevBoard/1.ESP32-S3.png" class="align-center" src="_static/DevBoard/1.ESP32-S3.png" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div><p><strong>Example program</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The example program in this tutorial is developed using the Arduino IDE; details regarding the use of this software are not covered here.</p></li>
+<li><p>If you need a beginner’s guide, please click here to view it: <a class="reference external" href="https://esp32-ultimate-starter-kit.readthedocs.io/en/latest/ArduinoTutorial.html">Arduino IDE</a>.</p></li>
+</ul>
+</div>
+<div style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+<div id="code-container-ESPS3" style="max-height: 420px; overflow: hidden; position: relative; background: #f5f5f0;"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testPins</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">46</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span>
+<span class="w">   </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">47</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span>
+<span class="p">};</span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalPins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">testPins</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">totalPins</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">pinMode</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="c1">// Forward direction</span>
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">totalPins</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">       </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+
+<span class="w">   </span><span class="c1">// Backward direction</span>
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalPins</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">       </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div style="display: flex; gap: 10px; padding: 12px 16px; background: #fff; border-top: 1px solid #ddd;">
+  <button id="expand-btn-ESPS3" onclick="toggleCode('code-container-ESPS3', 'expand-btn-ESPS3')" style="flex: 1; padding: 10px 16px; background: #2980B9; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">▼ Expand All Code</button>
+</div>
+</div>
+
+<style>
+#code-container-ESPS3 { transition: max-height 0.4s ease-in-out; }
+</style>
+
+<script>
+function toggleCode(containerId, buttonId) {
+  const container = document.getElementById(containerId);
+  const btn = document.getElementById(buttonId);
+  if (container.style.maxHeight === '420px' || container.style.maxHeight === '') {
+    container.style.maxHeight = 'none';
+    btn.textContent = '✕ Collapse Code';
+  } else {
+    container.style.maxHeight = '420px';
+    btn.textContent = '▼ Expand All Code';
+  }
+}
+</script><div style="margin-top: 30px;"></div><p><strong>Display Effect</strong></p>
+<a class="reference internal image-reference" href="_static/DevBoard/2.ESP32-S3.gif"><img alt="_static/DevBoard/2.ESP32-S3.gif" class="align-center" src="_static/DevBoard/2.ESP32-S3.gif" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div><ul class="simple">
+<li><p>The program sequentially illuminates the blue LED corresponding to each pin (setting the output to a high level) according to the order defined in the array.</p></li>
+<li><p>After remaining lit for 500 milliseconds, the LEDs turn off; the sequence then repeats in reverse order, continuing in an infinite loop.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Each pin is equipped with a blue LED indicator to show the voltage status of the development board’s pins. When you control a pin to output a high or low voltage, the indicator LED changes accordingly.</p></li>
+<li><p>Similarly, if certain pins on the development board are unused, they remain in a floating state—potentially at a high or low voltage level—and the corresponding indicator LEDs on the board will light up or turn off accordingly.</p></li>
+<li><p>The other compatible development boards introduced next also implement the same functionality.</p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="esp32">
+<h2>2. ESP32<a class="headerlink" href="#esp32" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="_static/DevBoard/3.ESP32.png"><img alt="_static/DevBoard/3.ESP32.png" class="align-center" src="_static/DevBoard/3.ESP32.png" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div><ul class="simple">
+<li><p>Compatible with most ESP32 series modules—including the ESP32-WROOM and ESP32-CAM development boards.</p></li>
+<li><p>The ESP32-WROOM will be used for demonstration purposes here.</p></li>
+</ul>
+<p><strong>Connection Method</strong></p>
+<a class="reference internal image-reference" href="_static/DevBoard/4.ESP32.png"><img alt="_static/DevBoard/4.ESP32.png" class="align-center" src="_static/DevBoard/4.ESP32.png" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div><p><strong>Example program</strong></p>
+<div style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+<div id="code-container-ESP32" style="max-height: 420px; overflow: hidden; position: relative; background: #f5f5f0;"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testPins</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span>
+<span class="w">   </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span>
+<span class="p">};</span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalPins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">testPins</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">scanDelay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">   </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;ESP32 Pin Scan Test Started&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Total pins to test: &quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">totalPins</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">totalPins</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">pinMode</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">       </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Pin &quot;</span><span class="p">);</span>
+<span class="w">       </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">       </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; initialized&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+
+<span class="w">   </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Setup complete. Starting scan loop...&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">totalPins</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">       </span><span class="n">delay</span><span class="p">(</span><span class="n">scanDelay</span><span class="p">);</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+
+<span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalPins</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">       </span><span class="n">delay</span><span class="p">(</span><span class="n">scanDelay</span><span class="p">);</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+
+<span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div style="display: flex; gap: 10px; padding: 12px 16px; background: #fff; border-top: 1px solid #ddd;">
+  <button id="expand-btn-ESP32" onclick="toggleCode('code-container-ESP32', 'expand-btn-ESP32')" style="flex: 1; padding: 10px 16px; background: #2980B9; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">▼ Expand All Code</button>
+</div>
+</div>
+
+<style>
+#code-container-ESP32 { transition: max-height 0.4s ease-in-out; }
+</style>
+
+<script>
+function toggleCode(containerId, buttonId) {
+  const container = document.getElementById(containerId);
+  const btn = document.getElementById(buttonId);
+  if (container.style.maxHeight === '420px' || container.style.maxHeight === '') {
+    container.style.maxHeight = 'none';
+    btn.textContent = '✕ Collapse Code';
+  } else {
+    container.style.maxHeight = '420px';
+    btn.textContent = '▼ Expand All Code';
+  }
+}
+</script><div style="margin-top: 30px;"></div><p><strong>Display Effect</strong></p>
+<a class="reference internal image-reference" href="_static/DevBoard/5.ESP32.gif"><img alt="_static/DevBoard/5.ESP32.gif" class="align-center" src="_static/DevBoard/5.ESP32.gif" style="width: 800px;" /></a>
 <div style="margin-top: 30px;"></div></section>
+<hr class="docutils" />
+<section id="esp8266">
+<h2>3. ESP8266<a class="headerlink" href="#esp8266" title="Link to this heading"></a></h2>
+<blockquote>
+<div><a class="reference internal image-reference" href="_static/DevBoard/6.ESP8266.png"><img alt="_static/DevBoard/6.ESP8266.png" class="align-center" src="_static/DevBoard/6.ESP8266.png" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div></div></blockquote>
+<ul class="simple">
+<li><p>Compatible with most ESP8266 (ESP-12E) series development boards.</p></li>
+</ul>
+<p><strong>Connection Method</strong></p>
+<a class="reference internal image-reference" href="_static/DevBoard/7.ESP8266.png"><img alt="_static/DevBoard/7.ESP8266.png" class="align-center" src="_static/DevBoard/7.ESP8266.png" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div><p><strong>Example program</strong></p>
+<div style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+<div id="code-container-ESP8266" style="max-height: 420px; overflow: hidden; position: relative; background: #f5f5f0;"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testPins</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="mi">16</span><span class="p">,</span><span class="w">  </span><span class="c1">// D0</span>
+<span class="w">   </span><span class="mi">5</span><span class="p">,</span><span class="w">   </span><span class="c1">// D1</span>
+<span class="w">   </span><span class="mi">4</span><span class="p">,</span><span class="w">   </span><span class="c1">// D2</span>
+<span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w">   </span><span class="c1">// D3</span>
+<span class="w">   </span><span class="mi">2</span><span class="p">,</span><span class="w">   </span><span class="c1">// D4</span>
+<span class="w">   </span><span class="mi">14</span><span class="p">,</span><span class="w">  </span><span class="c1">// D5</span>
+<span class="w">   </span><span class="mi">12</span><span class="p">,</span><span class="w">  </span><span class="c1">// D6</span>
+<span class="w">   </span><span class="mi">13</span><span class="p">,</span><span class="w">  </span><span class="c1">// D7</span>
+<span class="w">   </span><span class="mi">15</span><span class="w">   </span><span class="c1">// D8</span>
+<span class="p">};</span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalPins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">testPins</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">totalPins</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">pinMode</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="c1">// Forward direction</span>
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">totalPins</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">       </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+
+<span class="w">   </span><span class="c1">// Backward direction</span>
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalPins</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">       </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div style="display: flex; gap: 10px; padding: 12px 16px; background: #fff; border-top: 1px solid #ddd;">
+  <button id="expand-btn-ESP8266" onclick="toggleCode('code-container-ESP8266', 'expand-btn-ESP8266')" style="flex: 1; padding: 10px 16px; background: #2980B9; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">▼ Expand All Code</button>
+</div>
+</div>
+
+<style>
+#code-container-ESP8266 { transition: max-height 0.4s ease-in-out; }
+</style>
+
+<script>
+function toggleCode(containerId, buttonId) {
+  const container = document.getElementById(containerId);
+  const btn = document.getElementById(buttonId);
+  if (container.style.maxHeight === '420px' || container.style.maxHeight === '') {
+    container.style.maxHeight = 'none';
+    btn.textContent = '✕ Collapse Code';
+  } else {
+    container.style.maxHeight = '420px';
+    btn.textContent = '▼ Expand All Code';
+  }
+}
+</script><div style="margin-top: 30px;"></div><p><strong>Display Effect</strong></p>
+<a class="reference internal image-reference" href="_static/DevBoard/8.ESP8266.gif"><img alt="_static/DevBoard/8.ESP8266.gif" class="align-center" src="_static/DevBoard/8.ESP8266.gif" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div></section>
+<hr class="docutils" />
+<section id="arduino-nano">
+<h2>4. Arduino Nano<a class="headerlink" href="#arduino-nano" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="_static/DevBoard/9.ArduinoNano.png"><img alt="_static/DevBoard/9.ArduinoNano.png" class="align-center" src="_static/DevBoard/9.ArduinoNano.png" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div><ul class="simple">
+<li><p>Compatible with most Arduino Nano series modules.</p></li>
+</ul>
+<p><strong>Connection Method</strong></p>
+<a class="reference internal image-reference" href="_static/DevBoard/10.ArduinoNano.png"><img alt="_static/DevBoard/10.ArduinoNano.png" class="align-center" src="_static/DevBoard/10.ArduinoNano.png" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div><p><strong>Example program</strong></p>
+<div style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
+<div id="code-container-ArduinoNano" style="max-height: 420px; overflow: hidden; position: relative; background: #f5f5f0;"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testPins</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+<span class="w">   </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span>
+<span class="p">};</span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalPins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">testPins</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">totalPins</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">pinMode</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="c1">// Forward direction</span>
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">totalPins</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">       </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+
+<span class="w">   </span><span class="c1">// Backward direction</span>
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalPins</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">       </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">       </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">testPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div style="display: flex; gap: 10px; padding: 12px 16px; background: #fff; border-top: 1px solid #ddd;">
+  <button id="expand-btn-ArduinoNano" onclick="toggleCode('code-container-ArduinoNano', 'expand-btn-ArduinoNano')" style="flex: 1; padding: 10px 16px; background: #2980B9; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">▼ Expand All Code</button>
+</div>
+</div>
+
+<style>
+#code-container-ArduinoNano { transition: max-height 0.4s ease-in-out; }
+</style>
+
+<script>
+function toggleCode(containerId, buttonId) {
+  const container = document.getElementById(containerId);
+  const btn = document.getElementById(buttonId);
+  if (container.style.maxHeight === '420px' || container.style.maxHeight === '') {
+    container.style.maxHeight = 'none';
+    btn.textContent = '✕ Collapse Code';
+  } else {
+    container.style.maxHeight = '420px';
+    btn.textContent = '▼ Expand All Code';
+  }
+}
+</script><div style="margin-top: 30px;"></div><p><strong>Display Effect</strong></p>
+<a class="reference internal image-reference" href="_static/DevBoard/11.ArduinoNano.gif"><img alt="_static/DevBoard/11.ArduinoNano.gif" class="align-center" src="_static/DevBoard/11.ArduinoNano.gif" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div></section>
+<hr class="docutils" />
+<section id="raspberry-pi-pico">
+<h2>5. Raspberry Pi Pico<a class="headerlink" href="#raspberry-pi-pico" title="Link to this heading"></a></h2>
+<blockquote>
+<div><a class="reference internal image-reference" href="_static/DevBoard/12.RaspberryPiPico.png"><img alt="_static/DevBoard/12.RaspberryPiPico.png" class="align-center" src="_static/DevBoard/12.RaspberryPiPico.png" style="width: 800px;" /></a>
+<div style="margin-top: 30px;"></div></div></blockquote>
+<ul class="simple">
+<li><p>Compatible with most Arduino Nano series development boards.</p></li>
+</ul>
+</section>
 </section>
 
 
