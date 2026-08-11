@@ -91,25 +91,15 @@ Technical Parameters
    * - Parameter
      - Value
    * - Input Voltage
-     - One 18650 battery（3.7–4.2V）
+     - 7-12V
    * - Operating Voltage
      - 3.3V-5V
-   * - Charging Voltage
-     - TYPE-C 5V/2A
-   * - Main Control Chip
-     - ESP32-S3 N16R8
-   * - Power Amplifier Chip
-     - MAX98357AETE+T
-   * - Microphone Model
-     - Digital I2S output
-   * - Servo Model
-     - MG90S Servo
-   * - Screen Model
-     - SSD1306 0.96 Inch OLED Display
-   * - Gesture Module Signal
-     - PAJ7620U2
-   * - Speaker
-     - 8Ω 1W
+   * - Compatible Development Board Pin Count
+     - Up to 24 pins in a single row
+   * - Compatible Development Board Width
+     - 600-1000 Mil
+   * - Pin Pitch Of Compatible Development Board
+     - 100 mil
 
 ----
 
@@ -159,11 +149,11 @@ Function Introduction
 Resource Download
 -----------------
 
-All the necessary code and library files for this course are provided. You can obtain all the resources through the following link.
+The sample code required for this course has been provided; you can access all the resources via the following link.
 
 .. raw:: html
 
-    <a href="_static/Test_Code.zip" class="btn btn-primary" download>📥 Download Code And Libraries</a>
+    <a href="_static/Test_Code.zip" class="btn btn-primary" download>📥 Download Example program</a>
     
 ----
 
