@@ -69,6 +69,8 @@ To demonstrate its functionality, we will use a 900mil-wide ESP32-S3 development
 
    <div style="margin-top: 30px;"></div>
 
+----
+
 Power Supply Method
 -------------------
 
@@ -123,6 +125,27 @@ Power the development board
     - If the development board fails to power on after connecting the external power supply, please check whether the jumper caps are correctly positioned on the 5V output pins and the corresponding GND pins.
 
 4. The steps for using other development boards are the same as those described above; you simply need to correctly identify the power pins on the board.
+
+----
+
+Connect Other Sensor Module
+------------------------------
+
+1. Once the development board is powered on, you can proceed with various expansion experiments—such as connecting external components like displays, servos, or sensors to the breakout board.
+
+2. The breakout board offers three types of expansion interfaces—pin headers, female headers, and terminal blocks—allowing for flexible connections to various modules using jumper wires.
+
+3. The following example demonstrates how to connect components, using a DHT11 temperature and humidity sensor.
+
+.. image:: _static/UserGuide/6.dht11.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+----
 
 Summary
 -------
