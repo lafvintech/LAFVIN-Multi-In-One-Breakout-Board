@@ -91,6 +91,8 @@ Connect to an external power source.
 
   When connecting the power cable, please ensure you distinguish between the positive and negative terminals; for this breakout board, the center pin of the DC connector is the positive terminal.
 
+----
+
 2. To ensure stable system operation, an input voltage of **9V or higher** is recommended when using an external power supply. After connecting the power, turn on the switch, and the green power indicator light will turn on.
 
 .. attention::
@@ -100,6 +102,8 @@ Connect to an external power source.
  - If the breakout board fails to power the development board after connecting an external power supply, the issue is likely a polarity mismatch at the DC connector.
 
  - The positive and negative terminals may be reversed; please verify the DC connector specifications to ensure they correctly match the board's requirements.
+
+----
 
 Power the development board
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
