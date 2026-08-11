@@ -91,15 +91,15 @@ Technical Parameters
    * - Parameter
      - Value
    * - Input Voltage
-     - 7-12V
+     - DC 7V-12V
    * - Operating Voltage
      - 3.3V-5V
    * - Compatible Development Board Pin Count
      - Up to 24 pins in a single row
    * - Compatible Development Board Width
-     - 600-1000 Mil
+     - 600-1000 Mil（15.24-25.4mm）
    * - Pin Pitch Of Compatible Development Board
-     - 100 mil
+     - 100 mil（2.54mm）
 
 ----
 
