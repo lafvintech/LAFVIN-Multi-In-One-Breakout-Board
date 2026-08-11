@@ -156,6 +156,17 @@ Function Introduction
 
 ----
 
+Resource Download
+-----------------
+
+All the necessary code and library files for this course are provided. You can obtain all the resources through the following link.
+
+.. raw:: html
+
+    <a href="_static/Test_Code.zip" class="btn btn-primary" download>📥 Download Code And Libraries</a>
+    
+----
+
 **Next, we will delve into the core content of the course and help you gradually understand the relevant concepts and master the operation procedures.**
 
 ----
