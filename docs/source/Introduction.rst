@@ -69,7 +69,6 @@ Bill of Materials
 
    Please check the contents of the package against the bill of materials. If you find any missing or damaged items, please contact our technical support team immediately.
 
-
 Technical Parameters
 --------------------
 
