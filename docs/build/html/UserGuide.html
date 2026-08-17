@@ -67,7 +67,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#connect-other-sensor-module">Connect Other Sensor Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
 </ul>
 </li>
 </ul>
@@ -139,18 +138,19 @@
 <h2>Install Development Board<a class="headerlink" href="#install-development-board" title="Link to this heading"></a></h2>
 <p>This breakout board features a universal design that supports various development boards with a standard 100mil (2.54mm) dual-row pin layout and widths ranging from 600mil to 1000mil (15.24mm to 25.4mm); it is compatible with common platforms such as Arduino Nano, ESP32, ESP8266, and Raspberry Pi Pico.</p>
 <p>To demonstrate its functionality, we will use a 1000mil-wide ESP32-S3 development board.</p>
-<a class="reference internal image-reference" href="_static/UserGuide/2.install.png"><img alt="_static/UserGuide/2.install.png" class="align-center" src="_static/UserGuide/2.install.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/2.install.png"><img alt="_images/2.install.png" class="align-center" src="_images/2.install.png" style="width: 600px;" /></a>
 <div style="margin-top: 30px;"></div><ol class="arabic simple">
 <li><p>As shown in the figure, when installing the development board, ensure that the board’s pins are securely aligned with the breakout board’s female headers. Otherwise, poor contact may occur, affecting the device’s normal operation.</p></li>
 </ol>
-<div class="admonition attention">
+<a class="reference internal image-reference" href="_images/2.install2.png"><img alt="_images/2.install2.png" class="align-center" src="_images/2.install2.png" style="width: 1000px;" /></a>
+<div style="margin-top: 30px;"></div><div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Please handle the development board with care during installation. Forcing the removal or installation may cause the pins to bend or even become damaged.</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>There are no restrictions on the mounting orientation or location of the development board; you are free to choose how to install it.</p></li>
 </ol>
-<a class="reference internal image-reference" href="_static/UserGuide/3.location.png"><img alt="_static/UserGuide/3.location.png" class="align-center" src="_static/UserGuide/3.location.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/3.location.png"><img alt="_images/3.location.png" class="align-center" src="_images/3.location.png" style="width: 1000px;" /></a>
 <div style="margin-top: 30px;"></div></section>
 <hr class="docutils" />
 <section id="power-supply-method">
@@ -186,7 +186,7 @@
 <li><p>It supports switching between 3.3V and 5V power outputs using a jumper cap, making it compatible with a wide range of development boards and electronic modules.</p></li>
 <li><p>The ESP32-S3 development board demonstrated here requires a 5V power supply for stable operation; therefore, the board can be powered by using jumper caps to connect the 5V supply to VCC1 and the corresponding GND pins.</p></li>
 </ol>
-<a class="reference internal image-reference" href="_static/UserGuide/5.jumper.png"><img alt="_static/UserGuide/5.jumper.png" class="align-center" src="_static/UserGuide/5.jumper.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/5.jumper.png"><img alt="_images/5.jumper.png" class="align-center" src="_images/5.jumper.png" style="width: 600px;" /></a>
 <div style="margin-top: 30px;"></div><div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <ul class="simple">
@@ -211,13 +211,18 @@
 <li><p>The breakout board offers three types of expansion interfaces—pin headers, female headers, and terminal blocks—allowing for flexible connections to various modules using jumper wires.</p></li>
 <li><p>The following example demonstrates how to connect components, using a DHT11 temperature and humidity sensor.</p></li>
 </ol>
-<a class="reference internal image-reference" href="_static/UserGuide/6.dht11.png"><img alt="_static/UserGuide/6.dht11.png" class="align-center" src="_static/UserGuide/6.dht11.png" style="width: 800px;" /></a>
-<div style="margin-top: 30px;"></div></section>
-<hr class="docutils" />
-<section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
-<p>This guide shows how to use the breakout board quickly: install the development board, connect power correctly, and use the expansion interfaces for easy prototyping and testing.</p>
-<hr class="docutils" />
+<a class="reference internal image-reference" href="_images/6.dht11.png"><img alt="_images/6.dht11.png" class="align-center" src="_images/6.dht11.png" style="width: 600px;" /></a>
+<div style="margin-top: 30px;"></div><ol class="arabic simple" start="4">
+<li><p>Terminal block connection method:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Use the included screwdriver to loosen the terminal block screw clockwise.</p></li>
+<li><p>Insert the wire or terminal into the corresponding hole, then tighten it counterclockwise to secure it.</p></li>
+</ul>
+</div></blockquote>
+<a class="reference internal image-reference" href="_images/7.terminal.png"><img alt="_images/7.terminal.png" class="align-center" src="_images/7.terminal.png" style="width: 600px;" /></a>
+<div style="margin-top: 30px;"></div><hr class="docutils" />
 </section>
 </section>
 

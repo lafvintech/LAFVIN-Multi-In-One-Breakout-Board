@@ -27,7 +27,7 @@ Compatible Development Boards
 -----------
 
 .. image:: _static/DevBoard/0.ESP32-S3.png
-   :width: 800
+   :width: 500
    :align: center
 
 .. raw:: html
@@ -43,7 +43,7 @@ Compatible Development Boards
 The connection method to the breakout board is shown in the figure below:
 
 .. image:: _static/DevBoard/1.ESP32-S3.png
-   :width: 800
+   :width: 600
    :align: center
 
 .. raw:: html
@@ -127,9 +127,8 @@ The connection method to the breakout board is shown in the figure below:
 
 **Display Effect**
 
-.. image:: _static/DevBoard/2.ESP32-S3.gif
-   :width: 800
-   :align: center
+.. video:: _static//DevBoard/17.EFFECT.mp4
+    :width: 100%
 
 .. raw:: html
 
@@ -138,6 +137,10 @@ The connection method to the breakout board is shown in the figure below:
 - The program sequentially illuminates the blue LED corresponding to each pin (setting the output to a high level) according to the order defined in the array.
 
 - After remaining lit for 500 milliseconds, the LEDs turn off; the sequence then repeats in reverse order, continuing in an infinite loop.
+
+.. attention::
+
+ - The example program logic for other development boards is the same (circularly lighting up LEDs), and the running effect is consistent, so subsequent demonstrations are omitted.   
 
 .. note::
 
@@ -153,8 +156,8 @@ The connection method to the breakout board is shown in the figure below:
 2. ESP32
 ---------
 
-.. image:: _static/DevBoard/3.ESP32.png
-   :width: 800
+.. image:: _static/DevBoard/3.ESP32_board.png
+   :width: 500
    :align: center
 
 .. raw:: html
@@ -168,7 +171,7 @@ The connection method to the breakout board is shown in the figure below:
 **Connection Method**
 
 .. image:: _static/DevBoard/4.ESP32.png
-   :width: 800
+   :width: 600
    :align: center
 
 .. raw:: html
@@ -260,35 +263,25 @@ The connection method to the breakout board is shown in the figure below:
 
    <div style="margin-top: 30px;"></div>
 
-**Display Effect**
+----
 
-.. image:: _static/DevBoard/5.ESP32.gif
-   :width: 800
+3. ESP8266
+-----------
+
+.. image:: _static/DevBoard/6.ESP8266.png
+   :width: 500
    :align: center
 
 .. raw:: html
 
    <div style="margin-top: 30px;"></div>
 
-----
-
-3. ESP8266
------------
-
-   .. image:: _static/DevBoard/6.ESP8266.png
-      :width: 800
-      :align: center
-
-   .. raw:: html
-
-      <div style="margin-top: 30px;"></div>
-
 - Compatible with most ESP8266 (ESP-12E) series development boards.
 
 **Connection Method**
 
 .. image:: _static/DevBoard/7.ESP8266.png
-   :width: 800
+   :width: 600
    :align: center
 
 .. raw:: html
@@ -371,23 +364,13 @@ The connection method to the breakout board is shown in the figure below:
 
    <div style="margin-top: 30px;"></div>
 
-**Display Effect**
-
-.. image:: _static/DevBoard/8.ESP8266.gif
-   :width: 800
-   :align: center
-
-.. raw:: html
-
-   <div style="margin-top: 30px;"></div>
-
 ----
 
 4. Arduino Nano
 ---------------
 
 .. image:: _static/DevBoard/9.ArduinoNano.png
-   :width: 800
+   :width: 500
    :align: center
 
 .. raw:: html
@@ -399,7 +382,7 @@ The connection method to the breakout board is shown in the figure below:
 **Connection Method**
 
 .. image:: _static/DevBoard/10.ArduinoNano.png
-   :width: 800
+   :width: 600
    :align: center
 
 .. raw:: html
@@ -475,42 +458,32 @@ The connection method to the breakout board is shown in the figure below:
 
  <div style="margin-top: 30px;"></div>
 
-**Display Effect**
-
-.. image:: _static/DevBoard/11.ArduinoNano.gif
-   :width: 800
-   :align: center
-
-.. raw:: html
-
-   <div style="margin-top: 30px;"></div>
-
 ----
 
 5. Raspberry Pi Pico
 ----------------------
 
-   .. image:: _static/DevBoard/12.RaspberryPiPico.png
-      :width: 800
-      :align: center
+.. image:: _static/DevBoard/12.RaspberryPiPico.png
+   :width: 500
+   :align: center
 
-   .. raw:: html
+.. raw:: html
 
-      <div style="margin-top: 30px;"></div>
+   <div style="margin-top: 30px;"></div>
    
 - Compatible with most Raspberry Pi Pico series development boards.
 
 **Connection Method**
 
 .. image:: _static/DevBoard/13.RaspberryPiPico.png
-   :width: 800
+   :width: 600
    :align: center
 
 .. raw:: html
 
    <div style="margin-top: 30px;"></div>
 
-**Example program**
+**Example program**  
 
 .. raw:: html
 
@@ -579,16 +552,6 @@ The connection method to the breakout board is shown in the figure below:
 
  <div style="margin-top: 30px;"></div>
 
-**Display Effect**
-
-.. image:: _static/DevBoard/14.RaspberryPiPico.gif
-   :width: 800
-   :align: center
-
-.. raw:: html
-
-   <div style="margin-top: 30px;"></div>
-
 ----
 
 6. Other Development Board
@@ -614,7 +577,7 @@ The connection method to the breakout board is shown in the figure below:
 
 - The development board is equipped with power input header pins (such as VIN) and GND pins.
 
-.. image:: _static/DevBoard/16.OtherDevBoard.png
+.. image:: _static/DevBoard/16.OTHER.png
    :width: 800
    :align: center
 

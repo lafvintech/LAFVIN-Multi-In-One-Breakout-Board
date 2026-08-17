@@ -46,7 +46,7 @@ This breakout board features a universal design that supports various developmen
 To demonstrate its functionality, we will use a 1000mil-wide ESP32-S3 development board.
 
 .. image:: _static/UserGuide/2.install.png
-   :width: 800
+   :width: 600
    :align: center
 
 .. raw:: html
@@ -55,6 +55,14 @@ To demonstrate its functionality, we will use a 1000mil-wide ESP32-S3 developmen
 
 1. As shown in the figure, when installing the development board, ensure that the board's pins are securely aligned with the breakout board's female headers. Otherwise, poor contact may occur, affecting the device's normal operation.
 
+.. image:: _static/UserGuide/2.install2.png
+   :width: 1000
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
 .. attention::
 
  Please handle the development board with care during installation. Forcing the removal or installation may cause the pins to bend or even become damaged.
@@ -62,7 +70,7 @@ To demonstrate its functionality, we will use a 1000mil-wide ESP32-S3 developmen
 2. There are no restrictions on the mounting orientation or location of the development board; you are free to choose how to install it.
 
 .. image:: _static/UserGuide/3.location.png
-   :width: 800
+   :width: 1000
    :align: center
 
 .. raw:: html
@@ -115,7 +123,7 @@ Power the development board
 3. The ESP32-S3 development board demonstrated here requires a 5V power supply for stable operation; therefore, the board can be powered by using jumper caps to connect the 5V supply to VCC1 and the corresponding GND pins.
 
 .. image:: _static/UserGuide/5.jumper.png
-   :width: 800
+   :width: 600
    :align: center
 
 .. raw:: html
@@ -152,18 +160,25 @@ Connect Other Sensor Module
 3. The following example demonstrates how to connect components, using a DHT11 temperature and humidity sensor.
 
 .. image:: _static/UserGuide/6.dht11.png
-   :width: 800
+   :width: 600
    :align: center
 
 .. raw:: html
 
    <div style="margin-top: 30px;"></div>
 
-----
+4. Terminal block connection method:
 
-Summary
--------
+ - Use the included screwdriver to loosen the terminal block screw clockwise.
 
-This guide shows how to use the breakout board quickly: install the development board, connect power correctly, and use the expansion interfaces for easy prototyping and testing.
+ - Insert the wire or terminal into the corresponding hole, then tighten it counterclockwise to secure it.
+
+.. image:: _static/UserGuide/7.terminal.png
+   :width: 600
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
 
 ----

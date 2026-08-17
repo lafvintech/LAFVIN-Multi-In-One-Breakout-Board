@@ -67,7 +67,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="UserGuide.html#connect-other-sensor-module">Connect Other Sensor Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="UserGuide.html#summary">Summary</a></li>
 </ul>
 </li>
 </ul>
@@ -130,14 +129,14 @@
 <hr class="docutils" />
 <section id="esp32-s3">
 <h2>1. ESP32-S3<a class="headerlink" href="#esp32-s3" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="_static/DevBoard/0.ESP32-S3.png"><img alt="_static/DevBoard/0.ESP32-S3.png" class="align-center" src="_static/DevBoard/0.ESP32-S3.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/0.ESP32-S3.png"><img alt="_images/0.ESP32-S3.png" class="align-center" src="_images/0.ESP32-S3.png" style="width: 500px;" /></a>
 <div style="margin-top: 30px;"></div><ul class="simple">
 <li><p>Compatible with most ESP32-S3 series modules—including the ESP32-S3-WROOM and ESP32-S3-CAM—supporting both 42-pin and 44-pin configurations.</p></li>
 <li><p>The 44-Pin ESP32-S3-WROOM is used here for demonstration purposes.</p></li>
 </ul>
 <p><strong>Connection Method</strong></p>
 <p>The connection method to the breakout board is shown in the figure below:</p>
-<a class="reference internal image-reference" href="_static/DevBoard/1.ESP32-S3.png"><img alt="_static/DevBoard/1.ESP32-S3.png" class="align-center" src="_static/DevBoard/1.ESP32-S3.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/1.ESP32-S3.png"><img alt="_images/1.ESP32-S3.png" class="align-center" src="_images/1.ESP32-S3.png" style="width: 600px;" /></a>
 <div style="margin-top: 30px;"></div><p><strong>Example program</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -201,11 +200,16 @@ function toggleCode(containerId, buttonId) {
   }
 }
 </script><div style="margin-top: 30px;"></div><p><strong>Display Effect</strong></p>
-<a class="reference internal image-reference" href="_static/DevBoard/2.ESP32-S3.gif"><img alt="_static/DevBoard/2.ESP32-S3.gif" class="align-center" src="_static/DevBoard/2.ESP32-S3.gif" style="width: 800px;" /></a>
-<div style="margin-top: 30px;"></div><ul class="simple">
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" preload="auto" width="100%"><source src="_images/17.EFFECT.mp4" type="video/mp4"></video></div><div style="margin-top: 30px;"></div><ul class="simple">
 <li><p>The program sequentially illuminates the blue LED corresponding to each pin (setting the output to a high level) according to the order defined in the array.</p></li>
 <li><p>After remaining lit for 500 milliseconds, the LEDs turn off; the sequence then repeats in reverse order, continuing in an infinite loop.</p></li>
 </ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ul class="simple">
+<li><p>The example program logic for other development boards is the same (circularly lighting up LEDs), and the running effect is consistent, so subsequent demonstrations are omitted.</p></li>
+</ul>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
@@ -218,13 +222,13 @@ function toggleCode(containerId, buttonId) {
 <hr class="docutils" />
 <section id="esp32">
 <h2>2. ESP32<a class="headerlink" href="#esp32" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="_static/DevBoard/3.ESP32.png"><img alt="_static/DevBoard/3.ESP32.png" class="align-center" src="_static/DevBoard/3.ESP32.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/3.ESP32_board.png"><img alt="_images/3.ESP32_board.png" class="align-center" src="_images/3.ESP32_board.png" style="width: 500px;" /></a>
 <div style="margin-top: 30px;"></div><ul class="simple">
 <li><p>Compatible with most ESP32 series modules—including the ESP32-WROOM and ESP32-CAM development boards.</p></li>
 <li><p>The ESP32-WROOM will be used for demonstration purposes here.</p></li>
 </ul>
 <p><strong>Connection Method</strong></p>
-<a class="reference internal image-reference" href="_static/DevBoard/4.ESP32.png"><img alt="_static/DevBoard/4.ESP32.png" class="align-center" src="_static/DevBoard/4.ESP32.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/4.ESP32.png"><img alt="_images/4.ESP32.png" class="align-center" src="_images/4.ESP32.png" style="width: 600px;" /></a>
 <div style="margin-top: 30px;"></div><p><strong>Example program</strong></p>
 <div style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
 <div id="code-container-ESP32" style="max-height: 420px; overflow: hidden; position: relative; background: #f5f5f0;"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testPins</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -295,20 +299,16 @@ function toggleCode(containerId, buttonId) {
     btn.textContent = '▼ Expand All Code';
   }
 }
-</script><div style="margin-top: 30px;"></div><p><strong>Display Effect</strong></p>
-<a class="reference internal image-reference" href="_static/DevBoard/5.ESP32.gif"><img alt="_static/DevBoard/5.ESP32.gif" class="align-center" src="_static/DevBoard/5.ESP32.gif" style="width: 800px;" /></a>
-<div style="margin-top: 30px;"></div></section>
+</script><div style="margin-top: 30px;"></div></section>
 <hr class="docutils" />
 <section id="esp8266">
 <h2>3. ESP8266<a class="headerlink" href="#esp8266" title="Link to this heading"></a></h2>
-<blockquote>
-<div><a class="reference internal image-reference" href="_static/DevBoard/6.ESP8266.png"><img alt="_static/DevBoard/6.ESP8266.png" class="align-center" src="_static/DevBoard/6.ESP8266.png" style="width: 800px;" /></a>
-<div style="margin-top: 30px;"></div></div></blockquote>
-<ul class="simple">
+<a class="reference internal image-reference" href="_images/6.ESP8266.png"><img alt="_images/6.ESP8266.png" class="align-center" src="_images/6.ESP8266.png" style="width: 500px;" /></a>
+<div style="margin-top: 30px;"></div><ul class="simple">
 <li><p>Compatible with most ESP8266 (ESP-12E) series development boards.</p></li>
 </ul>
 <p><strong>Connection Method</strong></p>
-<a class="reference internal image-reference" href="_static/DevBoard/7.ESP8266.png"><img alt="_static/DevBoard/7.ESP8266.png" class="align-center" src="_static/DevBoard/7.ESP8266.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/7.ESP8266.png"><img alt="_images/7.ESP8266.png" class="align-center" src="_images/7.ESP8266.png" style="width: 600px;" /></a>
 <div style="margin-top: 30px;"></div><p><strong>Example program</strong></p>
 <div style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
 <div id="code-container-ESP8266" style="max-height: 420px; overflow: hidden; position: relative; background: #f5f5f0;"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testPins</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -371,18 +371,16 @@ function toggleCode(containerId, buttonId) {
     btn.textContent = '▼ Expand All Code';
   }
 }
-</script><div style="margin-top: 30px;"></div><p><strong>Display Effect</strong></p>
-<a class="reference internal image-reference" href="_static/DevBoard/8.ESP8266.gif"><img alt="_static/DevBoard/8.ESP8266.gif" class="align-center" src="_static/DevBoard/8.ESP8266.gif" style="width: 800px;" /></a>
-<div style="margin-top: 30px;"></div></section>
+</script><div style="margin-top: 30px;"></div></section>
 <hr class="docutils" />
 <section id="arduino-nano">
 <h2>4. Arduino Nano<a class="headerlink" href="#arduino-nano" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="_static/DevBoard/9.ArduinoNano.png"><img alt="_static/DevBoard/9.ArduinoNano.png" class="align-center" src="_static/DevBoard/9.ArduinoNano.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/9.ArduinoNano.png"><img alt="_images/9.ArduinoNano.png" class="align-center" src="_images/9.ArduinoNano.png" style="width: 500px;" /></a>
 <div style="margin-top: 30px;"></div><ul class="simple">
 <li><p>Compatible with most Arduino Nano series development boards.</p></li>
 </ul>
 <p><strong>Connection Method</strong></p>
-<a class="reference internal image-reference" href="_static/DevBoard/10.ArduinoNano.png"><img alt="_static/DevBoard/10.ArduinoNano.png" class="align-center" src="_static/DevBoard/10.ArduinoNano.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/10.ArduinoNano.png"><img alt="_images/10.ArduinoNano.png" class="align-center" src="_images/10.ArduinoNano.png" style="width: 600px;" /></a>
 <div style="margin-top: 30px;"></div><p><strong>Example program</strong></p>
 <div style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
 <div id="code-container-ArduinoNano" style="max-height: 420px; overflow: hidden; position: relative; background: #f5f5f0;"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testPins</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -438,20 +436,16 @@ function toggleCode(containerId, buttonId) {
     btn.textContent = '▼ Expand All Code';
   }
 }
-</script><div style="margin-top: 30px;"></div><p><strong>Display Effect</strong></p>
-<a class="reference internal image-reference" href="_static/DevBoard/11.ArduinoNano.gif"><img alt="_static/DevBoard/11.ArduinoNano.gif" class="align-center" src="_static/DevBoard/11.ArduinoNano.gif" style="width: 800px;" /></a>
-<div style="margin-top: 30px;"></div></section>
+</script><div style="margin-top: 30px;"></div></section>
 <hr class="docutils" />
 <section id="raspberry-pi-pico">
 <h2>5. Raspberry Pi Pico<a class="headerlink" href="#raspberry-pi-pico" title="Link to this heading"></a></h2>
-<blockquote>
-<div><a class="reference internal image-reference" href="_static/DevBoard/12.RaspberryPiPico.png"><img alt="_static/DevBoard/12.RaspberryPiPico.png" class="align-center" src="_static/DevBoard/12.RaspberryPiPico.png" style="width: 800px;" /></a>
-<div style="margin-top: 30px;"></div></div></blockquote>
-<ul class="simple">
+<a class="reference internal image-reference" href="_images/12.RaspberryPiPico.png"><img alt="_images/12.RaspberryPiPico.png" class="align-center" src="_images/12.RaspberryPiPico.png" style="width: 500px;" /></a>
+<div style="margin-top: 30px;"></div><ul class="simple">
 <li><p>Compatible with most Raspberry Pi Pico series development boards.</p></li>
 </ul>
 <p><strong>Connection Method</strong></p>
-<a class="reference internal image-reference" href="_static/DevBoard/13.RaspberryPiPico.png"><img alt="_static/DevBoard/13.RaspberryPiPico.png" class="align-center" src="_static/DevBoard/13.RaspberryPiPico.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/13.RaspberryPiPico.png"><img alt="_images/13.RaspberryPiPico.png" class="align-center" src="_images/13.RaspberryPiPico.png" style="width: 600px;" /></a>
 <div style="margin-top: 30px;"></div><p><strong>Example program</strong></p>
 <div style="background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px; overflow: hidden;">
 <div id="code-container-RaspberryPiPico" style="max-height: 420px; overflow: hidden; position: relative; background: #f5f5f0;"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testPins</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -507,9 +501,7 @@ function toggleCode(containerId, buttonId) {
     btn.textContent = '▼ Expand All Code';
   }
 }
-</script><div style="margin-top: 30px;"></div><p><strong>Display Effect</strong></p>
-<a class="reference internal image-reference" href="_static/DevBoard/14.RaspberryPiPico.gif"><img alt="_static/DevBoard/14.RaspberryPiPico.gif" class="align-center" src="_static/DevBoard/14.RaspberryPiPico.gif" style="width: 800px;" /></a>
-<div style="margin-top: 30px;"></div></section>
+</script><div style="margin-top: 30px;"></div></section>
 <hr class="docutils" />
 <section id="other-development-board">
 <h2>6. Other Development Board<a class="headerlink" href="#other-development-board" title="Link to this heading"></a></h2>
@@ -524,7 +516,7 @@ function toggleCode(containerId, buttonId) {
 <li><p>The development board’s power supply range is 3.3V–5V.</p></li>
 <li><p>The development board is equipped with power input header pins (such as VIN) and GND pins.</p></li>
 </ul>
-<a class="reference internal image-reference" href="_static/DevBoard/16.OtherDevBoard.png"><img alt="_static/DevBoard/16.OtherDevBoard.png" class="align-center" src="_static/DevBoard/16.OtherDevBoard.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/16.OTHER.png"><img alt="_images/16.OTHER.png" class="align-center" src="_images/16.OTHER.png" style="width: 800px;" /></a>
 <div style="margin-top: 30px;"></div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">

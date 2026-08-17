@@ -63,7 +63,9 @@ Bill of Materials
      - Flathead Screwdriver
      - x1  
 
-----
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
 
 .. attention::
 
@@ -92,7 +94,10 @@ Technical Parameters
    * - Pin Pitch Of Compatible Development Board
      - 100 mil（2.54mm）
 
-----
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
 
 Function Introduction
 ---------------------
