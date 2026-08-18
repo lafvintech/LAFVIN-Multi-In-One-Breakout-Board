@@ -268,7 +268,7 @@ The connection method to the breakout board is shown in the figure below:
 3. ESP8266
 -----------
 
-.. image:: _static/DevBoard/6.ESP8266.png
+.. image:: _static/DevBoard/6.esp8266.png
    :width: 500
    :align: center
 
